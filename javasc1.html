@@ -1,0 +1,46 @@
+<html>
+<head>
+<style>
+body{
+border-style:solid;
+}
+</style>
+<title>LOGIN PAGE</title>
+<script>  
+function log(){  
+var name=document.f1.uname.value;  
+var password=document.f1.password.value;  
+if (name==null || name==""){  
+  alert("please enter your name");  
+  return false;  
+}
+else if(password.length<8){  
+  alert("Password must be at least 8 characters long.");  
+  return false;  
+  }
+else{
+alert("succesfully logged in");
+return true;
+}
+}  
+</script>
+</head>  
+<body> 
+<form name="f1" method="post" onsubmit="return log()" >
+<table align="center">
+<caption><h2>LOGIN PAGE</h2></caption>
+<tr>
+<td>Username:</td>
+<td><input type="text" name="uname"><br/></td> 
+</tr>
+<tr>
+<td>Password:</td>
+<td><input type="password" name="password"><br/></td>
+</tr>
+<tr>
+<td colspan="2"><center><input type="submit" value="login"/></center></td>
+</tr>
+</table> 
+</form>  
+</body>
+</html>
